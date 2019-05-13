@@ -7,8 +7,8 @@ def colabfilter(npa,prepa,cln,sigma):
     for i in range(numcl):
         npac=npa[:,cln==i]
         prepac=prepa[:,cln==i]
-    #    dpac=Gdenoise(npac,prepac,sigma)
-        dpac=svddenoise(npac,sigma,30)
+     #   dpac=Gdenoise(npac,prepac,sigma)
+        dpac=svddenoise(npac,sigma,35)
         dpa[:,cln==i]=dpac
     return dpa
 
